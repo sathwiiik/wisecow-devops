@@ -7,20 +7,18 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - uses: actions/checkout@v4
 
       - uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: sathwiiik
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build image
-  run: docker build -t sathwiiik/wisecow:latest .
+        run: docker build -t sathwiiik/wisecow:latest .
 
       - name: Push image
-  run: docker push sathwiiik/wisecow:latest
+        run: docker push sathwiiik/wisecow:latest
