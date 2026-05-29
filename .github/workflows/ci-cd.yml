@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build image
-  run: docker build -t ${{ secrets.DOCKER_USERNAME }}/wisecow:latest .
+  run: docker build -t sathwiiik/wisecow:latest .
 
       - name: Push image
-  run: docker push ${{ secrets.DOCKER_USERNAME }}/wisecow:latest
+  run: docker push sathwiiik/wisecow:latest
